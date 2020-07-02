@@ -57,9 +57,13 @@ function updateCounter() {
   console.log('Update counter function');
   // var itemCountValue = document.getElementById('itemCount');
   for(var i = 0; i < cartValueQuantity.length - 1; i++){
-    itemCountSum = cartValueQuantity[i] + cartValueQuantity[i + 1];
+    var itemCountSum = parseInt(cartValueQuantity[i]) + parseInt(cartValueQuantity[i + 1]);
+    console.log(itemCountSum);
   }
-    return itemCountSum 
+    var sumPar = document.createElement('p')
+    var sumElment = document.getElementById('itemCount');
+    sumPar.textContent = itemCountSum; 
+    sumElment.appendChild(sumPar);
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
